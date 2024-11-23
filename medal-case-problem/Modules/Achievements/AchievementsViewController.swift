@@ -21,7 +21,7 @@ class AchievementsViewController: UIViewController {
             target: self,
             action: #selector(didTapMenu)
         )
-
+        
         fetchAchievements()
     }
 
