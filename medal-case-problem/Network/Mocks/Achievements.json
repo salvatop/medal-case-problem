@@ -1,79 +1,86 @@
-{
-    "personalRecords": [
-        {
-            "title": "Longest Run",
-            "result": "00:00",
-            "achieved": true,
-            "iconName": "longest_run"
-        },
-        {
-            "title": "Highest Elevation",
-            "result": "2095 ft",
-            "achieved": true,
-            "iconName": "highest_elevation"
-        },
-        {
-            "title": "Fastest 5K",
-            "result": "00:00",
-            "achieved": true,
-            "iconName": "fastest_5k"
-        },
-        {
-            "title": "10K",
-            "result": "00:00:00",
-            "achieved": true,
-            "iconName": "fastest_10k"
-        },
-        {
-            "title": "Half Marathon",
-            "result": "00:00",
-            "achieved": true,
-            "iconName": "fastest_half_marathon"
-        },
-        {
-            "title": "Marathon",
-            "result": "Not Yet",
-            "achieved": false,
-            "iconName": "fastest_marathon"
-        }
-    ],
-    "virtualRaces": [
-        {
-            "title": "Virtual Half Marathon Race",
-            "result": "00:00",
-            "achieved": true,
-            "iconName": "virtual_half_marathon_race"
-        },
-        {
-            "title": "Tokio-Hakone Ekiden 2020",
-            "result": "00:00:00",
-            "achieved": true,
-            "iconName": "tokyo_kakone_ekiden2"
-        },
-        {
-            "title": "Virtual 10k Race",
-            "result": "00:00:00",
-            "achieved": true,
-            "iconName": "virtual_10k_race"
-        },
-        {
-            "title": "Hakone Ekiden",
-            "result": "00:00:00",
-            "achieved": true,
-            "iconName": "hakone_ekiden"
-        },
-        {
-            "title": "Mizuno Singapore Ekiden 2015",
-            "result": "00:00:00",
-            "achieved": true,
-            "iconName": "mizuno_singapore_ekiden"
-        },
-        {
-            "title": "Virtual 5K Race",
-            "result": "23:07",
-            "achieved": true,
-            "iconName": "virtual_5k_race"
-        }
-    ]
-}
-
+[
+    {
+        "title": "Longest Run",
+        "result": "00:00",
+        "achieved": true,
+        "iconName": "longest_run",
+        "category": "personalRecords"
+    },
+    {
+        "title": "Highest Elevation",
+        "result": "2095 ft",
+        "achieved": true,
+        "iconName": "highest_elevation",
+        "category": "personalRecords"
+    },
+    {
+        "title": "Fastest 5K",
+        "result": "00:00",
+        "achieved": true,
+        "iconName": "fastest_5k",
+        "category": "personalRecords"
+    },
+    {
+        "title": "10K",
+        "result": "00:00:00",
+        "achieved": true,
+        "iconName": "fastest_10k",
+        "category": "personalRecords"
+    },
+    {
+        "title": "Half Marathon",
+        "result": "00:00",
+        "achieved": true,
+        "iconName": "fastest_half_marathon",
+        "category": "personalRecords"
+    },
+    {
+        "title": "Marathon",
+        "result": "Not Yet",
+        "achieved": false,
+        "iconName": "fastest_marathon",
+        "category": "personalRecords"
+    },
+    {
+        "title": "Virtual Half Marathon Race",
+        "result": "00:00",
+        "achieved": true,
+        "iconName": "virtual_half_marathon_race",
+        "category": "virtualRaces"
+    },
+    {
+        "title": "Tokio-Hakone Ekiden 2020",
+        "result": "00:00:00",
+        "achieved": true,
+        "iconName": "tokyo_kakone_ekiden2",
+        "category": "virtualRaces"
+    },
+    {
+        "title": "Virtual 10k Race",
+        "result": "00:00:00",
+        "achieved": true,
+        "iconName": "virtual_10k_race",
+        "category": "virtualRaces"
+    },
+    {
+        "title": "Hakone Ekiden",
+        "result": "00:00:00",
+        "achieved": true,
+        "iconName": "hakone_ekiden",
+        "category": "virtualRaces"
+    },
+    {
+        "title": "Mizuno Singapore Ekiden 2015",
+        "result": "00:00:00",
+        "achieved": true,
+        "iconName": "mizuno_singapore_ekiden",
+        "category": "virtualRaces"
+    },
+    {
+        "title": "Virtual 5K Race",
+        "result": "23:07",
+        "achieved": true,
+        "iconName": "virtual_5k_race",
+        "category": "virtualRaces"
+    }
+]

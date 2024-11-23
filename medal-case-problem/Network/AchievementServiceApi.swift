@@ -12,24 +12,20 @@ enum ApiError: Error {
     case failedToDecode
 }
 
-struct Achievements: Decodable {
-    let personalRecords: [Achievement]
-    let virtualRaces: [Achievement]
-}
-
 final class AchievementServiceApi {
-    func getAchievements() async throws -> Achievements {
+    func getAchievements() async throws -> [Achievement] {
         guard let url = Bundle.main.url(forResource: "Achievements", withExtension: "json") else {
             throw ApiError.fileNotFound
         }
 
         do {
             let data = try Data(contentsOf: url)
-            let achievements = try JSONDecoder().decode(Achievements.self, from: data)
+            let achievements = try JSONDecoder().decode([Achievement].self, from: data)
             return achievements
         } catch {
             throw ApiError.failedToDecode
         }
     }
+
 }
 
