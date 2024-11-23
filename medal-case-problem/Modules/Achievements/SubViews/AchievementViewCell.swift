@@ -14,7 +14,7 @@ final class AchievementViewCell: UICollectionViewCell {
     var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Theme.primaryColor
-        label.font = CommonFonts.collectionViewItem
+        label.font = CommonFonts.scaledFont(for: CommonFonts.collectionViewItem, textStyle: .footnote)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -24,7 +24,7 @@ final class AchievementViewCell: UICollectionViewCell {
     var timeLabel: UILabel = {
         let label = UILabel()
         label.textColor = Theme.primaryColor
-        label.font = CommonFonts.collectionViewItem
+        label.font = CommonFonts.scaledFont(for: CommonFonts.collectionViewItem, textStyle: .footnote)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

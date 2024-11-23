@@ -8,7 +8,7 @@
 import XCTest
 @testable import medal_case_problem
 
-final class AchievementServiceMockApiTests: XCTestCase {
+final class AchievementServiceApiTests: XCTestCase {
 
     var service: AchievementServiceApi!
 

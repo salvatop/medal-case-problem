@@ -11,6 +11,7 @@ struct CommonFonts {
 
     static let collectionViewHeader = UIFont.preferredFont(forTextStyle: .subheadline)
         .withSize(14)
+
     static let collectionViewItem = UIFont.preferredFont(forTextStyle: .footnote)
         .withSize(12)
 
