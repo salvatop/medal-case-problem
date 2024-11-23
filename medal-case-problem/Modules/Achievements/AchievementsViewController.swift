@@ -8,6 +8,8 @@
 import UIKit
 
 class AchievementsViewController: UIViewController {
+    let service = AchievementServiceApi()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Theme.backgroundColor
@@ -19,9 +21,22 @@ class AchievementsViewController: UIViewController {
             target: self,
             action: #selector(didTapMenu)
         )
+
+        fetchAchievements()
     }
 
     @objc private func didTapMenu() {
         print("Menu tapped")
+    }
+
+    private func fetchAchievements() {
+        Task {
+            do {
+                let achievements = try await service.getAchievements()
+                print("Achievements: \(achievements)")
+            } catch {
+                print("Error fetching achievements: \(error)")
+            }
+        }
     }
 }

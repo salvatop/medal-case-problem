@@ -25,6 +25,10 @@ struct Theme {
             .font: CommonFonts.scaledFont(for: CommonFonts.navigationBarTitle, textStyle: .headline)
         ]
 
+        let backButtonAppearance = UIBarButtonItemAppearance()
+        backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.clear]
+        appearance.backButtonAppearance = backButtonAppearance
+
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().tintColor = Theme.navigationBarFontColor

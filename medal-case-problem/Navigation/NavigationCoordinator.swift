@@ -32,12 +32,6 @@ class NavigationCoordinator: Coordinator {
     }
 
     func presentAchievementsView() {
-        navigationController.topViewController?.navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "",
-            style: .plain,
-            target: nil,
-            action: nil
-        )
         let achievementsVC = AchievementsViewController()
         navigationController.pushViewController(achievementsVC, animated: true)
     }
