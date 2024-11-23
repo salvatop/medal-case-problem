@@ -12,6 +12,11 @@ protocol Coordinator {
     func presentHomeView()
 }
 
+public enum ScreenTitle: String {
+    case Home
+    case Achievements
+}
+
 
 class NavigationCoordinator: Coordinator {
     var navigationController: UINavigationController
@@ -23,18 +28,7 @@ class NavigationCoordinator: Coordinator {
     func presentHomeView() {
         let homeVC = HomeViewController()
         homeVC.coordinator = self
-        setupNavigationBar()
         navigationController.setViewControllers([homeVC], animated: false)
-    }
-
-    private func setupNavigationBar() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .systemBlue
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController.navigationBar.standardAppearance = appearance
-        navigationController.navigationBar.scrollEdgeAppearance = appearance
-        navigationController.navigationBar.tintColor = .white
     }
 
     func presentAchievementsView() {

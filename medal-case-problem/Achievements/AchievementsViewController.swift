@@ -10,8 +10,8 @@ import UIKit
 class AchievementsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Achievements"
+        view.backgroundColor = Theme.backgroundColor
+        title = ScreenTitle.Achievements.rawValue
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "ellipsis"),
