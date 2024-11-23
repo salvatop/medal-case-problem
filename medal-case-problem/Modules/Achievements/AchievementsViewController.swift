@@ -19,7 +19,6 @@ class AchievementsViewController: UIViewController, UICollectionViewDelegate {
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 150, height: 180)
         layout.headerReferenceSize = CGSize(width: view.frame.width, height: 40)
-
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = Theme.backgroundColor
         collectionView.dataSource = self
@@ -36,7 +35,7 @@ class AchievementsViewController: UIViewController, UICollectionViewDelegate {
         title = ScreenTitle.Achievements.rawValue
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "ellipsis"),
+            image: UIImage(named: "ellipsis_vertical"),
             style: .plain,
             target: self,
             action: #selector(didTapMenu)
