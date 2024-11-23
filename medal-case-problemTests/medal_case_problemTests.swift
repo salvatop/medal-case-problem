@@ -8,29 +8,54 @@
 import XCTest
 @testable import medal_case_problem
 
-final class medal_case_problemTests: XCTestCase {
+final class AchievementServiceMockApiTests: XCTestCase {
+
+    var service: AchievementServiceApi!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+        service = AchievementServiceApi()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        service = nil
+        try super.tearDownWithError()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testLoadAchievementsSuccess() async throws {
+        let achievements = try await service.getAchievements()
+        XCTAssertEqual(achievements.count, 12, "Expected 12 achievements, but got \(achievements.count).")
+        guard let firstAchievement = achievements.first else {
+            XCTFail("First achievement should not be nil.")
+            return
+        }
+
+        XCTAssertEqual(firstAchievement.title, "Longest Run", "First achievement title mismatch.")
+        XCTAssertEqual(firstAchievement.result, "00:00", "First achievement result mismatch.")
+        XCTAssertEqual(firstAchievement.achieved, true, "First achievement achieved status mismatch.")
+        XCTAssertEqual(firstAchievement.iconName, "longest_run", "First achievement icon name mismatch.")
+        XCTAssertEqual(firstAchievement.category, "personal_records", "First achievement category mismatch.")
+        XCTAssertNotNil(firstAchievement.icon, "First achievement icon should not be nil.")
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testLoadAchievementsFileNotFound() async {
+        class MockAchievementServiceApi: AchievementServiceApi {
+            override func getAchievements() async throws -> [Achievement] {
+                guard Bundle.main.url(forResource: "NonExistentFile", withExtension: "json") != nil else {
+                    throw ApiError.fileNotFound
+                }
+                return []
+            }
+        }
+        let mockService = MockAchievementServiceApi()
+        do {
+            _ = try await mockService.getAchievements()
+            XCTFail("Expected fileNotFound error, but the method succeeded.")
+        } catch let error as ApiError {
+            XCTAssertEqual(error, .fileNotFound, "Expected fileNotFound error, but got \(error).")
+        } catch {
+            XCTFail("Expected ApiError.fileNotFound but got \(error).")
         }
     }
-
 }
+

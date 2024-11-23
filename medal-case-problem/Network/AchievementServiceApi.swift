@@ -12,7 +12,7 @@ enum ApiError: Error {
     case failedToDecode
 }
 
-final class AchievementServiceApi {
+class AchievementServiceApi {
     func getAchievements() async throws -> [Achievement] {
         guard let url = Bundle.main.url(forResource: "Achievements", withExtension: "json") else {
             throw ApiError.fileNotFound
