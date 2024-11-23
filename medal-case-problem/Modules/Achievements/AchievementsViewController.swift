@@ -12,7 +12,7 @@ class AchievementsViewController: UIViewController, UICollectionViewDelegate {
 
     private var achievements: [Achievement] = []
     private var achievementsByCategory: [String: [Achievement]] = [:]
-    private var categories: [String] = [] // To maintain category order
+    private var categories: [String] = []
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

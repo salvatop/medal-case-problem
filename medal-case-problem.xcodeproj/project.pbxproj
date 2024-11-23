@@ -14,19 +14,11 @@
 			remoteGlobalIDString = 325316E82CF23F620001E7A5;
 			remoteInfo = "medal-case-problem";
 		};
-		3253170A2CF23F630001E7A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 325316E12CF23F620001E7A5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 325316E82CF23F620001E7A5;
-			remoteInfo = "medal-case-problem";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		325316E92CF23F620001E7A5 /* medal-case-problem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "medal-case-problem.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		325316FF2CF23F630001E7A5 /* medal-case-problemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "medal-case-problemTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		325317092CF23F630001E7A5 /* medal-case-problemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "medal-case-problemUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -53,11 +45,6 @@
 			path = "medal-case-problemTests";
 			sourceTree = "<group>";
 		};
-		3253170C2CF23F630001E7A5 /* medal-case-problemUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "medal-case-problemUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +62,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		325317062CF23F630001E7A5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,7 +70,6 @@
 			children = (
 				325316EB2CF23F620001E7A5 /* medal-case-problem */,
 				325317022CF23F630001E7A5 /* medal-case-problemTests */,
-				3253170C2CF23F630001E7A5 /* medal-case-problemUITests */,
 				325316EA2CF23F620001E7A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +79,6 @@
 			children = (
 				325316E92CF23F620001E7A5 /* medal-case-problem.app */,
 				325316FF2CF23F630001E7A5 /* medal-case-problemTests.xctest */,
-				325317092CF23F630001E7A5 /* medal-case-problemUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,29 +131,6 @@
 			productReference = 325316FF2CF23F630001E7A5 /* medal-case-problemTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		325317082CF23F630001E7A5 /* medal-case-problemUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3253171A2CF23F630001E7A5 /* Build configuration list for PBXNativeTarget "medal-case-problemUITests" */;
-			buildPhases = (
-				325317052CF23F630001E7A5 /* Sources */,
-				325317062CF23F630001E7A5 /* Frameworks */,
-				325317072CF23F630001E7A5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3253170B2CF23F630001E7A5 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				3253170C2CF23F630001E7A5 /* medal-case-problemUITests */,
-			);
-			name = "medal-case-problemUITests";
-			packageProductDependencies = (
-			);
-			productName = "medal-case-problemUITests";
-			productReference = 325317092CF23F630001E7A5 /* medal-case-problemUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,10 +145,6 @@
 						CreatedOnToolsVersion = 16.0;
 					};
 					325316FE2CF23F630001E7A5 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 325316E82CF23F620001E7A5;
-					};
-					325317082CF23F630001E7A5 = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 325316E82CF23F620001E7A5;
 					};
@@ -215,7 +166,6 @@
 			targets = (
 				325316E82CF23F620001E7A5 /* medal-case-problem */,
 				325316FE2CF23F630001E7A5 /* medal-case-problemTests */,
-				325317082CF23F630001E7A5 /* medal-case-problemUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,13 +179,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		325316FD2CF23F630001E7A5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		325317072CF23F630001E7A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,13 +202,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		325317052CF23F630001E7A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -273,11 +209,6 @@
 			isa = PBXTargetDependency;
 			target = 325316E82CF23F620001E7A5 /* medal-case-problem */;
 			targetProxy = 325317002CF23F630001E7A5 /* PBXContainerItemProxy */;
-		};
-		3253170B2CF23F630001E7A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 325316E82CF23F620001E7A5 /* medal-case-problem */;
-			targetProxy = 3253170A2CF23F630001E7A5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -491,38 +422,6 @@
 			};
 			name = Release;
 		};
-		3253171B2CF23F630001E7A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "salvatore.palazzo.ca.medal-case-problemUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "medal-case-problem";
-			};
-			name = Debug;
-		};
-		3253171C2CF23F630001E7A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "salvatore.palazzo.ca.medal-case-problemUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "medal-case-problem";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,15 +448,6 @@
 			buildConfigurations = (
 				325317182CF23F630001E7A5 /* Debug */,
 				325317192CF23F630001E7A5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3253171A2CF23F630001E7A5 /* Build configuration list for PBXNativeTarget "medal-case-problemUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3253171B2CF23F630001E7A5 /* Debug */,
-				3253171C2CF23F630001E7A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
