@@ -30,8 +30,8 @@ jobs:
     - name: Build and Test
       run: |
         xcodebuild test \
-          -workspace YourAppName.xcworkspace \ # Change to `.xcodeproj` if not using CocoaPods
-          -scheme YourAppName \               # Replace with your scheme name
+          -workspace medal-case-problem.xcodeproj \
+          -scheme medal-case-problem \ 
           -sdk iphonesimulator \
           -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' | xcpretty
       env:
