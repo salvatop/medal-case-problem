@@ -26,7 +26,7 @@ struct Theme {
         appearance.backgroundColor = navigationBarBackgroundColor
         appearance.titleTextAttributes = [
             .foregroundColor: navigationBarFontColor,
-            .font: CommonFonts.scaledFont(for: CommonFonts.navigationBarTitle, textStyle: .headline)
+            .font: Theme.Fonts.scaledFont(for: Theme.Fonts.navigationBarTitle, textStyle: .headline)
         ]
 
         let backButtonAppearance = UIBarButtonItemAppearance()
@@ -57,6 +57,23 @@ struct Theme {
         let blue = CGFloat(hexValue & 0x0000FF) / 255.0
 
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+
+
+    struct Fonts {
+
+        static let collectionViewHeader = UIFont.preferredFont(forTextStyle: .subheadline)
+            .withSize(14)
+
+        static let collectionViewItem = UIFont.preferredFont(forTextStyle: .footnote)
+            .withSize(12)
+
+        static let navigationBarTitle = UIFont.preferredFont(forTextStyle: .headline)
+            .withSize(16)
+
+        static func scaledFont(for font: UIFont, textStyle: UIFont.TextStyle) -> UIFont {
+            return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
+        }
     }
 }
 

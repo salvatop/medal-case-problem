@@ -20,7 +20,7 @@ final class HeaderViewCell: UICollectionViewCell {
     var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Theme.collectionViewHeaderTitledColor
-        label.font = CommonFonts.scaledFont(for: CommonFonts.collectionViewHeader , textStyle: .subheadline)
+        label.font = Theme.Fonts.scaledFont(for: Theme.Fonts.collectionViewHeader , textStyle: .subheadline)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -28,7 +28,7 @@ final class HeaderViewCell: UICollectionViewCell {
     var achievedLabel: UILabel = {
         let label = UILabel()
         label.textColor = Theme.collectionViewHeaderSubTitledColor
-        label.font = CommonFonts.scaledFont(for: CommonFonts.collectionViewHeader , textStyle: .subheadline)
+        label.font = Theme.Fonts.scaledFont(for: Theme.Fonts.collectionViewHeader , textStyle: .subheadline)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
