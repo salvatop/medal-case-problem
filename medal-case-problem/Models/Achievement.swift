@@ -13,7 +13,7 @@ struct Achievement: Decodable {
     let achieved: Bool
     let iconName: String
     let category: String
-
+    
     var icon: UIImage? {
         return UIImage(named: iconName)
     }
