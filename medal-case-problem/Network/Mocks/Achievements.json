@@ -1,21 +1,21 @@
 [
     {
         "title": "Longest Run",
-        "result": "00:00",
+        "result": "00:00:00",
         "achieved": true,
         "iconName": "longest_run",
         "category": "personal_records"
     },
     {
-        "title": "Highest Elevation",
-        "result": "2095 ft",
+        "title": "Highest Elevation 2095 ft",
+        "result": "00:00:00",
         "achieved": true,
         "iconName": "highest_elevation",
         "category": "personal_records"
     },
     {
         "title": "Fastest 5K",
-        "result": "00:00",
+        "result": "00:00:00",
         "achieved": true,
         "iconName": "fastest_5k",
         "category": "personal_records"
@@ -29,21 +29,21 @@
     },
     {
         "title": "Half Marathon",
-        "result": "00:00",
+        "result": "00:00:00",
         "achieved": true,
         "iconName": "fastest_half_marathon",
         "category": "personal_records"
     },
     {
         "title": "Marathon",
-        "result": "Not Yet",
+        "result": "00:00:00",
         "achieved": false,
         "iconName": "fastest_marathon",
         "category": "personal_records"
     },
     {
         "title": "Virtual Half Marathon Race",
-        "result": "00:00",
+        "result": "00:00:00",
         "achieved": true,
         "iconName": "virtual_half_marathon_race",
         "category": "virtual_races"

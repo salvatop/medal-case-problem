@@ -9,7 +9,6 @@ import UIKit
 
 class AchievementsViewController: UIViewController, UICollectionViewDelegate {
     private let service = AchievementServiceApi()
-
     private var achievements: [Achievement] = []
     private var achievementsByCategory: [String: [Achievement]] = [:]
     private var categories: [String] = []
