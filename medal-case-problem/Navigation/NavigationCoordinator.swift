@@ -13,8 +13,8 @@ protocol Coordinator {
 }
 
 public enum ScreenTitle: String {
-    case Home
-    case Achievements
+    case home
+    case achievements
 }
 
 

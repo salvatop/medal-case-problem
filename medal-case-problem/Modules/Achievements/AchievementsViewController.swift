@@ -31,7 +31,7 @@ class AchievementsViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Theme.backgroundColor
-        title = ScreenTitle.Achievements.rawValue
+        title = ScreenTitle.achievements.rawValue
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "ellipsis_vertical"),
