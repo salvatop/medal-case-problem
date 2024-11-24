@@ -31,7 +31,7 @@ final class AchievementServiceApiTests: XCTestCase {
         }
 
         XCTAssertEqual(firstAchievement.title, "Longest Run", "First achievement title mismatch.")
-        XCTAssertEqual(firstAchievement.result, "00:00", "First achievement result mismatch.")
+        XCTAssertEqual(firstAchievement.result, "00:00:00", "First achievement result mismatch.")
         XCTAssertEqual(firstAchievement.achieved, true, "First achievement achieved status mismatch.")
         XCTAssertEqual(firstAchievement.iconName, "longest_run", "First achievement icon name mismatch.")
         XCTAssertEqual(firstAchievement.category, "personal_records", "First achievement category mismatch.")
