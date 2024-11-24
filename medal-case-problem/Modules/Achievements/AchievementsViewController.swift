@@ -8,7 +8,7 @@
 import UIKit
 
 class AchievementsViewController: UIViewController, UICollectionViewDelegate {
-    private let service = AchievementServiceApi()
+    private lazy var api = AchievementsApi()
     private var achievements: [Achievement] = []
     private var achievementsByCategory: [String: [Achievement]] = [:]
     private var categories: [String] = []
@@ -61,7 +61,7 @@ class AchievementsViewController: UIViewController, UICollectionViewDelegate {
     private func fetchAchievements() {
         Task {
             do {
-                achievements = try await service.getAchievements()
+                achievements = try await api.getAchievements()
                 groupAchievementsByCategory(achievements)
                 collectionView.reloadData()
             } catch {

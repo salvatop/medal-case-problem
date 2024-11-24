@@ -10,11 +10,11 @@ import XCTest
 
 final class AchievementServiceApiTests: XCTestCase {
 
-    var service: AchievementServiceApi!
+    var service: AchievementsApi!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        service = AchievementServiceApi()
+        service = AchievementsApi()
     }
 
     override func tearDownWithError() throws {
@@ -31,7 +31,7 @@ final class AchievementServiceApiTests: XCTestCase {
         }
 
         XCTAssertEqual(firstAchievement.title, "Longest Run", "First achievement title mismatch.")
-        XCTAssertEqual(firstAchievement.result, "00:00:00", "First achievement result mismatch.")
+        XCTAssertEqual(firstAchievement.result, "00:00", "First achievement result mismatch.")
         XCTAssertEqual(firstAchievement.achieved, true, "First achievement achieved status mismatch.")
         XCTAssertEqual(firstAchievement.iconName, "longest_run", "First achievement icon name mismatch.")
         XCTAssertEqual(firstAchievement.category, "personal_records", "First achievement category mismatch.")
@@ -39,7 +39,7 @@ final class AchievementServiceApiTests: XCTestCase {
     }
 
     func testLoadAchievementsFileNotFound() async {
-        class MockAchievementServiceApi: AchievementServiceApi {
+        class MockAchievementServiceApi: AchievementsApi {
             override func getAchievements() async throws -> [Achievement] {
                 guard Bundle.main.url(forResource: "NonExistentFile", withExtension: "json") != nil else {
                     throw ApiError.fileNotFound

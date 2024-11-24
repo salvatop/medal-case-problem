@@ -1,5 +1,5 @@
 //
-//  AchievementServiceApi.swift
+//  AchievementsApi.swift
 //  medal-case-problem
 //
 //  Created by Salvatore Palazzo on 2024-11-23.
@@ -12,7 +12,7 @@ enum ApiError: Error {
     case failedToDecode
 }
 
-class AchievementServiceApi {
+class AchievementsApi {
     func getAchievements() async throws -> [Achievement] {
         guard let url = Bundle.main.url(forResource: "Achievements", withExtension: "json") else {
             throw ApiError.fileNotFound
